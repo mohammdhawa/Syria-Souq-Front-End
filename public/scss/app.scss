@@ -1,0 +1,21 @@
+
+/*--------- Abstracts variable ---------- */
+@import "./abstracts/index";
+
+/*---------- Reset css styles ----------- */
+@import "reset";
+
+/*------------ Components ---------------- */
+@import "./component/index";
+
+/*-------------- section ----------------- */
+@import "./section";
+
+/*--------------- dashboard ---------------- */
+@import "./dashboard";
+
+/*-------------- Responsive ----------------- */
+@import "./responsive";
+
+/*-------------- Login ----------------- */
+@import "./login";
