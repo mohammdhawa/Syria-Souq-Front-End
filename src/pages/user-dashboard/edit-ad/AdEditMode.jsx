@@ -357,7 +357,7 @@ const AdEditMode = ({ ad, onUpdate, setEditMode }) => {
       setFeatureError(null);
       try {
         const response = await axios.get(
-          `https://staging.syr-souq.com/api/feature-groups/${category}/category`
+          `http://localhost:8000/api/feature-groups/${category}/category`
         );
 
         setFeatureGroups(response.data);

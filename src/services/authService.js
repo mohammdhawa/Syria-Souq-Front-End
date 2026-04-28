@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://syr-souq.com/api";
+const API_BASE_URL = "http://localhost:8000/api";
 
 class AuthService {
   // Get Google OAuth redirect URL from backend

@@ -95,7 +95,7 @@ const DashboardLayout = () => {
         console.log('🔍 Dashboard: Encoded auth_token:', encodeURIComponent(authToken));
 
         try {
-          const apiUrl = `https://staging.syr-souq.com/api/auth/google/result?token=${encodeURIComponent(authToken)}`;
+          const apiUrl = `http://localhost:8000/api/auth/google/result?token=${encodeURIComponent(authToken)}`;
           console.log('🔍 Dashboard: API URL:', apiUrl);
 
           const response = await fetch(apiUrl, {
