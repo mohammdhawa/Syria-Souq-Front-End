@@ -198,7 +198,7 @@ const ResetPassword = () => {
       setLoading(true);
       try {
         const response = await axios.post(
-          `https://staging.syr-souq.com/api/reset-password?token=${token}`,
+          `http://localhost:8000/api/reset-password?token=${token}`,
           {
             password: userData.password,
             password_confirmation: userData.password_confirmation,

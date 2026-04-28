@@ -6,7 +6,7 @@ export default function Pricing() {
 
   useEffect(() => {
     axios
-      .get("https://staging.syr-souq.com/api/available-packages")
+      .get("http://localhost:8000/api/available-packages")
       .then((response) => {
 
         setPlans(response.data.packages);

@@ -88,7 +88,7 @@ const ForgotPassword = () => {
       setLoading(true);
       try {
         const response = await axios.post(
-          "https://staging.syr-souq.com/api/forgot-password",
+          "http://localhost:8000/api/forgot-password",
           {
             email: credentials.email,
           }
