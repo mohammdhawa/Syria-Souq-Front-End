@@ -143,7 +143,7 @@ const authReducer = (state = initialState, action) => {
         resendOtpError: null,
       };
 
-    // Auth status cases
+    // auth status cases
     case AUTH_TYPES.SET_AUTH_CHECKED:
       return {
         ...state,

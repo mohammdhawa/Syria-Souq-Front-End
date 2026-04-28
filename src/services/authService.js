@@ -143,7 +143,7 @@ class AuthService {
     }
   }
 
-  // Mobile Google Auth (for mobile apps)
+  // Mobile Google auth (for mobile apps)
   async mobileGoogleAuth(idToken) {
     try {
       const response = await fetch(`${API_BASE_URL}/auth/mobile-google`, {
