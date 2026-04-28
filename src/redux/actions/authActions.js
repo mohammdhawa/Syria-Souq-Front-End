@@ -423,7 +423,7 @@ export const checkAuthStatus = () => async (dispatch) => {
       dispatch(loginSuccess());
       await dispatch(fetchProfile());
       await dispatch(fetchFavorites());
-      console.log('✅ Redux: Auth state updated successfully');
+      console.log('✅ Redux: auth state updated successfully');
     } else {
       console.log('❌ Redux: User not authenticated, logging out...');
       localStorage.setItem("app_logout", Date.now().toString());

@@ -12,8 +12,8 @@ const HomePageWrapper = () => {
   const authSuccess = urlParams.get('auth_success');
   const authError = urlParams.get('auth_error');
 
-  console.log('🔍 HomePageWrapper: Auth Success:', authSuccess);
-  console.log('🔍 HomePageWrapper: Auth Error:', authError);
+  console.log('🔍 HomePageWrapper: auth Success:', authSuccess);
+  console.log('🔍 HomePageWrapper: auth Error:', authError);
 
   // If there are OAuth parameters, show the callback handler
   if (authSuccess || authError) {

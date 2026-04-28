@@ -66,8 +66,8 @@ const DashboardLayout = () => {
       const authToken = urlParams.get('auth_token');
       const authError = urlParams.get('auth_error');
 
-      console.log('🔍 Dashboard: Auth token:', authToken);
-      console.log('🔍 Dashboard: Auth error:', authError);
+      console.log('🔍 Dashboard: auth token:', authToken);
+      console.log('🔍 Dashboard: auth error:', authError);
 
       // If no OAuth parameters, don't do anything (user is already on dashboard)
       if (!authToken && !authError) {
@@ -86,7 +86,7 @@ const DashboardLayout = () => {
 
       // Check for auth_success first (even if there's an error, success takes priority)
       const authSuccess = urlParams.get('auth_success');
-      console.log('🔍 Dashboard: Auth success:', authSuccess);
+      console.log('🔍 Dashboard: auth success:', authSuccess);
 
       // If we have an auth_token, treat it as a success (even without auth_success parameter)
       if (authToken) {
@@ -110,7 +110,7 @@ const DashboardLayout = () => {
           console.log('🔍 Dashboard: Response headers:', response.headers);
 
           const data = await response.json();
-          console.log('🔍 Dashboard: Auth result response:', data);
+          console.log('🔍 Dashboard: auth result response:', data);
 
           if (data.success) {
             // Store tokens and user data
@@ -152,14 +152,14 @@ const DashboardLayout = () => {
             window.history.replaceState({}, document.title, window.location.pathname);
             return;
           } else {
-            console.error('❌ Dashboard: Auth failed despite success parameter:', data.error);
+            console.error('❌ Dashboard: auth failed despite success parameter:', data.error);
             // Clear URL parameters and redirect to login
             window.history.replaceState({}, document.title, window.location.pathname);
             navigate('/auth/login', { replace: true });
             return;
           }
         } catch (error) {
-          console.error('❌ Dashboard: Auth error:', error);
+          console.error('❌ Dashboard: auth error:', error);
           // Clear URL parameters and redirect to login
           window.history.replaceState({}, document.title, window.location.pathname);
           navigate('/auth/login', { replace: true });
@@ -168,7 +168,7 @@ const DashboardLayout = () => {
       }
 
       if (authError) {
-        console.error('❌ Dashboard: Auth error detected:', authError);
+        console.error('❌ Dashboard: auth error detected:', authError);
         console.error('❌ Dashboard: Full URL:', window.location.href);
         console.error('❌ Dashboard: Search params:', window.location.search);
 

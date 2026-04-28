@@ -22,8 +22,8 @@ const OAuthCallbackHandler = () => {
         const authSuccess = urlParams.get('auth_success');
         const authError = urlParams.get('auth_error');
 
-        console.log('🔍 Auth Success:', authSuccess);
-        console.log('🔍 Auth Error:', authError);
+        console.log('🔍 auth Success:', authSuccess);
+        console.log('🔍 auth Error:', authError);
 
         if (authSuccess) {
           console.log('✅ OAuth Success detected, processing...');
@@ -31,7 +31,7 @@ const OAuthCallbackHandler = () => {
           
           // Check for auth_token parameter (new token-based flow)
           const authToken = urlParams.get('auth_token');
-          console.log('🔍 Auth token parameter:', authToken);
+          console.log('🔍 auth token parameter:', authToken);
           
           if (authToken) {
             console.log('🔍 Using new token-based authentication...');
