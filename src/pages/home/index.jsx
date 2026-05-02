@@ -11,6 +11,7 @@ import AdvertisementSectionHome from "@/components/home/AdvertisementSectionHome
 import CreativeAdSpot from "@/components/home/CreativeAdSpot";
 import Loader from "@/components/Loader";
 import FaqsSectionHome from "@/components/home/FaqsSectionHome";
+import FeaturedAdvertisementsSection from "@/components/home/FeaturedAdvertisementsSection";
 const metadata = {
   title:
     "Syria Souq | أكبر منصة في سوريا للإعلانات المبوبة لبيع وتأجير العقارات والسيارات",
@@ -41,6 +42,7 @@ export default function HomePage2() {
           <Hero />
           <FeaturedAdsShowcase />
           <Categories />
+          <FeaturedAdvertisementsSection />
           {/* Creative Ad spot placed between categories and locations */}
           {/* <CreativeAdSpot /> */}
           <AdvertisementSectionHome />
